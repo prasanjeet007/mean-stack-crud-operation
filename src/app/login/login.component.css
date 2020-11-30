@@ -1,0 +1,14 @@
+.container {
+    border: 2px solid black;
+    margin: 10px auto;
+}
+button {
+    margin: 10px;
+}
+.form {
+    margin: 10px auto;
+}
+.header {
+    text-align: center;
+    color: burlywood;
+}

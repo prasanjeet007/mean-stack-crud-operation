@@ -1,0 +1,13 @@
+.container {
+    margin:  28px auto;
+    border: 1px solid black;
+}
+.button {
+    margin: 10px 4px;
+}
+.header {
+    margin: auto;
+    text-align: center;
+    color: burlywood;
+}
+

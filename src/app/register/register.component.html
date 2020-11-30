@@ -1,0 +1,37 @@
+<div class="container">
+    <header class="header">
+        <h1>User Register Form</h1>
+    </header>
+  <form class="form" [formGroup]="registerForm">
+      <div class="form-group">
+       <label for="fname">Firstname</label>
+       <input type="text" id="fname" class="form-control" formControlName="firstname">
+      </div>
+      <div class="form-group">
+        <label for="lname">Lastname</label>
+        <input type="text" id="lname" class="form-control" formControlName="lastname">
+       </div>
+       <div class="form-group">
+        <label for="emaill">Email</label>
+        <input type="email" id="emaill" class="form-control" formControlName="email">
+       </div>
+       <div class="form-group">
+        <label for="phoneno">Phone Number</label>
+        <input type="text" id="phoneno" class="form-control" formControlName="phone">
+       </div>
+       <div class="form-group">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" class="form-control" formControlName="password">
+       </div>
+       <div class="form-group">
+        <label for="cpass">Confirm Password</label>
+        <input type="password" id="cpass" class="form-control" formControlName="cpassword">
+        <div class="text-danger" *ngIf="registerForm.value.password !== registerForm.value.cpassword">
+            Passwords don't match.
+        </div>
+       </div>
+       <button type="submit" class="btn btn-primary button" [disabled]="!registerForm.valid" (click)="submitRegisterForm(registerForm.value)">Register</button>
+       <button type="reset" class="btn btn-danger button">Cancel</button>
+  </form>
+</div>
+
