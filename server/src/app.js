@@ -5,7 +5,7 @@ require('../mongoose/mongoose');
 const routerr = require('../routers/router');
 const app = express();
 app.use(cors());
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(express.json());
