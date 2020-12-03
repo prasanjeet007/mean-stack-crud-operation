@@ -4,8 +4,9 @@
     </button>
     <span>Mean Stack App</span>
     <span class="example-spacer">
-        <span [routerLink]="['/register']" routerLinkActive="active">Register</span>&nbsp;
-        <span [routerLink]="['/login']" routerLinkActive="active">Login</span>
+        <button [routerLink]="['/register']" routerLinkActive="active">Register</button>&nbsp;
+        <button [routerLink]="['/login']" routerLinkActive="active" *ngIf="!login">{{loginText}}</button>
+        <button (click)="logout()" *ngIf="login">{{loginText}}</button>
     </span>
     <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>

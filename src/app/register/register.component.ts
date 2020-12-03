@@ -42,6 +42,7 @@ submitRegisterForm(value: any) {
    pass: value.password,
    cpass: value.cpassword
  };
+//  console.log(value);
  this._auth.registration(data).subscribe(res => {
    console.log(res);
    this.registerForm.reset();

@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
-  constructor() { }
+  userData: any;
+  constructor(private _auth: AuthService) {
+    this._auth.getResgisterUser().subscribe(res => {
+      this.userData = res;
+    });
+   }
 
   ngOnInit(): void {
   }
