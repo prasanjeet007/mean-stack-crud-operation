@@ -39,8 +39,8 @@ submitRegisterForm(value: any) {
    lname: value.lastname,
    email: value.email,
    phone: value.phone,
-   pass: value.password,
-   cpass: value.cpassword
+   pass: window.btoa(value.password),
+   cpass: window.btoa(value.cpassword)
  };
 //  console.log(value);
  this._auth.registration(data).subscribe(res => {

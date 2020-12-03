@@ -22,10 +22,10 @@ export class LoginComponent implements OnInit {
   }
   // tslint:disable-next-line: typedef
   loginFormSubmit(data: any) {
-    const value ={
-      email: data.value,
+    const value = {
+      email: data.email,
       pass: data.password
-    }
+    };
     this._auth.loginSubmit(value).subscribe(res => {
       localStorage.setItem('authenticate', JSON.stringify(res));
       this._auth.isLogin.next(true);
