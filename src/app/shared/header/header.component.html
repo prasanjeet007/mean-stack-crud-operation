@@ -4,7 +4,7 @@
     </button>
     <span>Mean Stack App</span>
     <span class="example-spacer">
-        <button [routerLink]="['/register']" routerLinkActive="active">Register</button>&nbsp;
+        <button [routerLink]="['/register']" routerLinkActive="active" *ngIf="!login">Register</button>&nbsp;
         <button [routerLink]="['/login']" routerLinkActive="active" *ngIf="!login">{{loginText}}</button>
         <button (click)="logout()" *ngIf="login">{{loginText}}</button>
     </span>

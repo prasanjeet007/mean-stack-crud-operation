@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   loginFormSubmit(data: any) {
     const value = {
       email: data.email,
-      pass: data.password
+      pass: window.btoa(data.password)
     };
     this._auth.loginSubmit(value).subscribe(res => {
       localStorage.setItem('authenticate', JSON.stringify(res));
