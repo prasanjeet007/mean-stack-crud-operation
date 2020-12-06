@@ -9,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   userData: any;
   constructor(private _auth: AuthService) {
+    this._auth.isLogin.next(true);
     this._auth.getResgisterUser().subscribe(res => {
       this.userData = res;
+      console.log(res);
     });
    }
 
